@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!--手动配置第一个XML格式bean，使用注解注入就不用在xml中配置大量的bean了 -->
+    <!--
+    class：全类名通过反射方式在IOC容器中创建bean，必须要求bean对应类要有无参的构造器
+    id : 获取bean的标识
+    属性注入是通过利用set方法注入的
+    -->
+    <bean id="helloworld" class="com.qiuxm.lesson1.HelloWorld">
+        <property name="name" value="hzqiuxm"></property>
+    </bean>
+
+    <!--配置自动扫描包 -->
+    <context:component-scan base-package="com.qiuxm" > </context:component-scan>
+
+    <!--shi使Aspectj生效 自动为匹配的类生成代理对象-->
+    <aop:aspectj-autoproxy> </aop:aspectj-autoproxy>
+</beans>
