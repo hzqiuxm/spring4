@@ -29,7 +29,7 @@ public class Main {
         UserServiceImpl userService = (UserServiceImpl) ctx.getBean("userService");
         System.out.println("userService = "+userService);
 
-        userController.addUser();
+        userService.doSomething();
 
     }
 }

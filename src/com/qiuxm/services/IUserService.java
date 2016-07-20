@@ -11,4 +11,6 @@ public interface IUserService {
 
     public void save();
 
+    public void doSomething();
+
 }

@@ -17,7 +17,8 @@ public class UserController {
     public  void addUser(){
 
         System.out.println(" Controller adduser() ... ");
-        iUserService.save();
+//        iUserService.save();
+        iUserService.doSomething();
     }
 
 }
